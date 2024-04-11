@@ -2,7 +2,7 @@
 
 Entwickeln Sie einen DEA, der eine mathematische Gleichung entgegen nimmt und überprüft, ob diese syntaktisch korrekt ist. Die folgende Abbildung zeigt den DEA inkl. seiner Zustände und Übergänge:
 
-// siehe Bild
+// siehe Bild![](/home/manuel/IdeaProjects/SS24/DEA-Automat/src/main/resources/Ü3 - Angabe.png)
 
 Als syntaktisch korrekt gelten dabei folgende Gleichungen:
 
