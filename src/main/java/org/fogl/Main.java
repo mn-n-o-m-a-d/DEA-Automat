@@ -1,6 +1,7 @@
 package org.fogl;
 
 import org.fogl.automat.DEAAutomat;
+import org.fogl.constants.DEAHelpers;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -12,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
 
-        Path path = Paths.get("src", "main", "resources", "uebung04042024.txt");
+        Path path = Paths.get("src", "main", "resources", "File.txt");
         Scanner scanner = new Scanner(System.in);
         FileReader fileReader = new FileReader();
         String choice = null;
@@ -45,6 +46,7 @@ public class Main {
         System.out.println("""
                                 
                 >>> DEA - Automat <<<
+                >>    Willkommen   <<
                                 
                 1 - Manuelle Eingabe
                 2 - Datei einlesen
@@ -54,7 +56,7 @@ public class Main {
                 """);
 
         do {
-            System.out.println("Bitte geben sie eine gültige Auswahl ein: ");
+            System.out.println(DEAHelpers.ANSI_YELLOW + "Bitte geben sie eine gültige Auswahl ein: " + DEAHelpers.ANSI_YELLOW);
             choice = scanner.nextLine();
         } while (!(choice.equals("1") || choice.equals("2") || choice.equals("9")));
 
@@ -65,8 +67,8 @@ public class Main {
 
         String userInput = null;
         do {
-            System.out.println("Bitte geben sie eine Buchstaben Kombination mit a, b, c, d ein: ");
-            userInput = scanner.nextLine().toLowerCase();
+            System.out.println(DEAHelpers.ANSI_YELLOW + "Bitte geben sie einen mathematischen Ausdruck ein: " + DEAHelpers.ANSI_YELLOW);
+            userInput = scanner.nextLine();
         } while (userInput.isEmpty());
 
         return DEAAutomat.DEA(userInput);
@@ -81,7 +83,7 @@ public class Main {
 
         for (var line : allLinesFromFile) {
 
-            System.out.println("Eingabe: " + line);
+            System.out.println();
             DEAAutomat.DEA(line);
             System.out.println();
 
