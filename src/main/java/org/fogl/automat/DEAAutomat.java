@@ -167,9 +167,9 @@ public class DEAAutomat {
         }
 
         if (state == DEAStates.STATE_END) {
-            System.out.println(DEAHelpers.ANSI_GREEN + "Die Eingabe war gültig! " + input + DEAHelpers.ANSI_GREEN);
+            System.out.println(DEAHelpers.ANSI_GREEN + "[SUCCESS]"+ DEAHelpers.ANSI_RESET + " Die Eingabe war gültig! " + input);
         } else {
-            System.out.println(DEAHelpers.ANSI_RED + "Die Eingabe war nicht gültig... " + input + DEAHelpers.ANSI_RED);
+            System.out.println(DEAHelpers.ANSI_RED + "[ERROR]" + DEAHelpers.ANSI_RESET + " Die Eingabe war nicht gültig... " + input);
         }
 
         return state == DEAStates.STATE_END;

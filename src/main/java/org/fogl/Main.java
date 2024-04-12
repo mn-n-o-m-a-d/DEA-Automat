@@ -25,17 +25,9 @@ public class Main {
             case "1" -> userInput(scanner);
             case "2" -> fileInput(fileReader, path);
             case "9" -> System.out.println("Bis zum nächsten mal!");
-            default -> System.out.println("Ungültige Eingabe - Beendet");
+            default -> System.out.println(DEAHelpers.ANSI_RED + "[ERROR]" + DEAHelpers.ANSI_RESET + " Ungültige Eingabe - Beendet");
 
         }
-        /*
-        // Test:
-        DEAAutomat.DEA("ab");
-        System.out.println(DEAHelpers.ANSI_RED + "Rot" + DEAHelpers.ANSI_RED);
-        System.out.println(DEAHelpers.ANSI_YELLOW + "Gelb" + DEAHelpers.ANSI_YELLOW);
-        System.out.println(DEAHelpers.ANSI_GREEN + "Grün" + DEAHelpers.ANSI_GREEN);
-        System.out.println(DEAHelpers.ANSI_RESET + "Reset" + DEAHelpers.ANSI_RESET);
-         */
     }
 
 
@@ -56,7 +48,7 @@ public class Main {
                 """);
 
         do {
-            System.out.println(DEAHelpers.ANSI_YELLOW + "Bitte geben sie eine gültige Auswahl ein: " + DEAHelpers.ANSI_YELLOW);
+            System.out.println(DEAHelpers.ANSI_YELLOW + "[INFO]" + DEAHelpers.ANSI_RESET + " Bitte geben sie eine gültige Auswahl ein: ");
             choice = scanner.nextLine();
         } while (!(choice.equals("1") || choice.equals("2") || choice.equals("9")));
 
@@ -67,7 +59,7 @@ public class Main {
 
         String userInput = null;
         do {
-            System.out.println(DEAHelpers.ANSI_YELLOW + "Bitte geben sie einen mathematischen Ausdruck ein: " + DEAHelpers.ANSI_YELLOW);
+            System.out.println(DEAHelpers.ANSI_YELLOW + "[INFO]" + DEAHelpers.ANSI_RESET + " Bitte geben sie einen mathematischen Ausdruck ein: ");
             userInput = scanner.nextLine();
         } while (userInput.isEmpty());
 

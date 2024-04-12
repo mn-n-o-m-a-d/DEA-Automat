@@ -2,6 +2,7 @@ package org.fogl.automat;
 
 
 import org.fogl.FileReader;
+import org.fogl.constants.DEAStates;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import java.io.IOException;
@@ -25,6 +26,12 @@ public class TestAutomat {
         String testInput = "1-1";
         boolean falseIfEndpointNotReached = DEAAutomat.DEA(testInput);
         Assertions.assertFalse(falseIfEndpointNotReached);
+    }
+
+    @Test
+    public void checkStateA() {
+
+        Assertions.assertEquals('A', DEAStates.STATE_A);
     }
 
     @Test
