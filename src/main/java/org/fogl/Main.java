@@ -2,7 +2,6 @@ package org.fogl;
 
 import org.fogl.automat.DEAAutomat;
 import org.fogl.constants.DEAHelpers;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
